@@ -1,0 +1,28 @@
+{
+    "manifest_version":2,
+    "name":"Bombot Extension",
+    "version":"0.0.1",
+    "description":"extension to assist the robot in bombcrypto game",
+
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.app.bombcrypto.io/*"
+            ],
+            "js": ["tracker.js"]
+        }
+    ],
+
+    "icons": { 
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+       "128": "img/icon128.png" 
+    },
+
+    "browser_action": {
+        "default_icon": "ic-bombot.png",
+        "default_title": "Bombot",
+        "default_popup": "home.html"
+    }
+
+}
